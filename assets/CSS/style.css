@@ -40,6 +40,8 @@ header h1 {
 #weather-station {
     border: 5px solid darkorchid;
     background-color: black;
+    margin: auto;
+    width: 100%;
 }
 
 .weather {
@@ -48,6 +50,4 @@ header h1 {
     margin: 20px;
 }
 
-.weather h2 {
-    left: 100px;
-}
+
