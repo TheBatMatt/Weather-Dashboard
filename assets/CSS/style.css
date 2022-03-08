@@ -1,0 +1,53 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(../Images/459817.jpg);
+    background-size: cover;
+}
+
+header {
+    border: 2px solid purple;
+    background-image: url(../Images/images.jpg);
+}
+
+header h1 {
+    -webkit-text-stroke: 2px black;
+    font-size: 70px;
+}
+
+#location-search {
+    width: 100%;
+    background-color: darkmagenta;
+}
+
+#search-box {
+    left: 200px;
+}
+
+#weather-section {
+    top: 300px
+}
+
+#weather-information {
+    box-sizing: border-box;
+    height: 300px;
+    width: 400px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    background-color: black;
+    border: 5px solid darkorchid;
+}
+
+#weather-station {
+    border: 5px solid darkorchid;
+    background-color: black;
+}
+
+.weather {
+    width: 250px;
+    height: 350px;
+    margin: 20px;
+}
+
+.weather h2 {
+    left: 100px;
+}

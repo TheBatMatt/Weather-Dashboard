@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/CSS/style.css" />
+  
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+
+    <header class = "text-center p-2 Jumbotron text-uppercase font-weight-bold">
+        <h1 style="color:purple">Weather Dashboard</h1>
+        <h3 class="font-italic text text-primary">The Coding Bat</h3>
+    </header>
+
+    <div id="weather-content" class="container">
+        <div class="row text-align-center">
+        
+            <div id="search-box" class="col-sm-3">
+                <form>
+                    <label for="search-city" class="text-white">Search for your hometown!</label>
+                    <div class="form-row">
+                        <input id="search-city" class="form-control" name="city" value="Cleveland"></input>
+                        <button type="submit" id="location-search" class="btn-lg">City Search<i class="fas fa-search"></i></button>
+                    </div>
+                </form>   
+            </div>
+            
+            <div id="weather-information"></div>
+
+            <div id="weather-station" class="row text-center">
+                <h2 style="color:purple" class="col-12">5 Day Weather Forcast</h2>
+                <div class="weather col pt-4 bg-dark text-primary ml-3"></div>
+                <div class="weather col pt-4 bg-dark text-primary ml-3"></div>
+                <div class="weather col pt-4 bg-dark text-primary ml-3"></div>
+                <div class="weather col pt-4 bg-dark text-primary ml-3"></div>
+                <div class="Weather col pt-4 bg-dark text-primary ml-3"></div>
+            </div>
+            
+         </div>
+    </div>
+
+    <!--JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!--touch punch-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <!--bootstrap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--moment.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/JS/script.js"></script>
+    
+</body>
+</html>
