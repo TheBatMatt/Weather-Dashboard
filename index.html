@@ -1,9 +1,12 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/CSS/style.css" />
   
@@ -24,22 +27,80 @@
                 <form>
                     <label for="search-city" class="text-white">Search for your hometown!</label>
                     <div class="form-row">
-                        <input id="search-city" class="form-control" name="city" value="Cleveland"></input>
+                        <input id="search-city" class="form-control" name="city" value="Cleveland, OH"></input>
                         <button type="submit" id="location-search" class="btn-lg">City Search<i class="fas fa-search"></i></button>
                     </div>
                 </form>   
             </div>
             
-            <div id="weather-information"></div>
+            <div id="weather-information">
+                <h2 class="text-center" style="color: purple">Current Forcast</h2>
+                <div>
+                    <span>Temperature:</span>
+                    <span id="temp"></span>
+                </div>
+                <div>
+                    <span>Humidity:</span>
+                    <span id="humid"></span>
+                </div>
+                <div>
+                    <span>Wind Speed:</span>
+                    <span id="wind"></span>
+                </div>
+                <div>
+                    <span>UV Index:</span>
+                    <span id="uv"></span>
+                </div>
+            </div>
 
-            <main id="weather-station" class="row text-center">
-                <h2 style="color:purple" class="col-12">5 Day Weather Forcast</h2>
-                <div class="weather border border-primary col-2 pt-4 bg-dark text-white ml-3"></div>
-                <div class="weather border border-primary col-2 pt-4 bg-dark text-white ml-3"></div>
-                <div class="weather border border-primary col-2 pt-4 bg-dark text-white ml-3"></div>
-                <div class="weather border border-primary col-2 pt-4 bg-dark text-white ml-3"></div>
-                <div class="Weather border border-primary col-2 pt-4 bg-dark text-white ml-3"></div>
-            </main>
+            <div id="weather-station" class="row text-center">
+                <h2 style="color:purple" class="col-12">Five Day Weather Forcast</h2>
+                <div class="weather border border-primary col-2 pt-4 bg-dark text-white ml-3">
+                    <span class="date"></span>
+                    <span>Temp: </span>
+                    <span class="temperature"></span>
+                    <span>W.Speed:</span>
+                    <span class="w-speed"></span>
+                    <span>Humidity:</span>
+                    <span class="humidity"></span>   
+                </div>
+                <div class="weather border border-primary col-2 pt-4 bg-dark text-white ml-3">
+                    <span class="date"></span>
+                    <span>Temp: </span>
+                    <span class="temperature"></span>
+                    <span>W.Speed:</span>
+                    <span class="w-speed"></span>
+                    <span>Humidity:</span>
+                    <span class="humidity"></span>
+                </div>
+                <div class="weather border border-primary col-2 pt-4 bg-dark text-white ml-3">
+                    <span class="date"></span>
+                    <span>Temp: </span>
+                    <span class="temperature"></span>
+                    <span>W.Speed:</span>
+                    <span class="w-speed"></span>
+                    <span>Humidity:</span>
+                    <span class="humidity"></span>
+                </div>
+                <div class="weather border border-primary col-2 pt-4 bg-dark text-white ml-3">
+                    <span class="date"></span>
+                    <span>Temp: </span>
+                    <span class="temperature"></span>
+                    <span>W.Speed:</span>
+                    <span class="w-speed"></span>
+                    <span>Humidity:</span>
+                    <span class="humidity"></span>
+                </div>
+                <div class="weather border border-primary col-2 pt-4 bg-dark text-white ml-3">
+                    <span class="date"></span>
+                    <span>Temp: </span>
+                    <span class="temperature"></span>
+                    <span>W.Speed:</span>
+                    <span class="w-speed"></span>
+                    <span>Humidity:</span>
+                    <span class="humidity"></span>
+                </div>
+            </div>
             
          </div>
     </div>

@@ -14,6 +14,10 @@ header h1 {
     font-size: 70px;
 }
 
+p {
+    font-size: 22px;
+}
+
 #location-search {
     width: 100%;
     background-color: darkmagenta;
@@ -35,6 +39,8 @@ header h1 {
     margin-left: 200px;
     background-color: black;
     border: 5px solid darkorchid;
+    color: white;
+    text-align: center;
 }
 
 #weather-station {
@@ -46,8 +52,39 @@ header h1 {
 
 .weather {
     width: 250px;
-    height: 350px;
+    height:300px;
     margin: 20px;
+    background-image: url(../Images/weather-Stormy-Weather-Wallpapers\,-Pictures\,-Photos-and-.jpg);
+    background-size: cover;
 }
+
+.uv-low {
+    color: green;
+}
+
+.uv-med {
+    color: yellow;
+}
+
+.uv-high {
+    color: orange;
+}
+
+.uv-very-high {
+    color: red;
+}
+
+.uv-extremely-high {
+    color: purple;
+}
+
+span {
+  display: none;
+  font-size: 22px;
+  color: white;
+  -webkit-text-stroke: 1px white;
+    
+}
+
 
 
