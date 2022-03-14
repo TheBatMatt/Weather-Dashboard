@@ -1,12 +1,12 @@
-body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-image: url(../Images/459817.jpg);
-    background-size: cover;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
-header {
-    border: 2px solid purple;
-    background-image: url(../Images/images.jpg);
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header h1 {
@@ -20,11 +20,11 @@ p {
 
 #location-search {
     width: 100%;
-    background-color: darkmagenta;
+    background-color: royalblue;
 }
 
 #search-box {
-    left: 200px;
+    right: 150px;
 }
 
 #weather-section {
@@ -34,18 +34,15 @@ p {
 #weather-information {
     box-sizing: border-box;
     height: 300px;
-    width: 400px;
+    width: 800px;
     margin-bottom: 20px;
-    margin-left: 200px;
-    background-color: black;
-    border: 5px solid darkorchid;
-    color: white;
+    border: 5px solid black;
+    color: black;
     text-align: center;
 }
 
 #weather-station {
-    border: 5px solid darkorchid;
-    background-color: black;
+    border: 5px solid black;
     margin: auto;
     width: 100%;
 }
@@ -54,36 +51,20 @@ p {
     width: 250px;
     height:300px;
     margin: 20px;
-    background-image: url(../Images/weather-Stormy-Weather-Wallpapers\,-Pictures\,-Photos-and-.jpg);
-    background-size: cover;
-}
-
-.uv-low {
-    color: green;
-}
-
-.uv-med {
-    color: yellow;
-}
-
-.uv-high {
-    color: orange;
-}
-
-.uv-very-high {
-    color: red;
-}
-
-.uv-extremely-high {
-    color: purple;
+    background-color: navy;
 }
 
 span {
   display: none;
   font-size: 22px;
   color: white;
-  -webkit-text-stroke: 1px white;
-    
+  -webkit-text-stroke: 1px black;
+  color: black;
+}
+
+#weather-station span {
+    color: white;
+    -webkit-text-stroke: white;
 }
 
 

@@ -56,26 +56,56 @@ function displayWeatherData(weatherInfo) {
   wind.text(weatherInfo.windSpeed);
   uv.text(weatherInfo.uvIndex);
 
-  if (uv >= 0 && uv <= 2) {
-    uv.css("background-color", "#3EA72D").css("color", "white");
-} else if (uv >= 3 && uv <= 5) {
-    uv.css("background-color", "#FFF300");
-} else if (uv >= 6 && uv <= 7) {
-    uv.css("background-color", "#F18B00");
-} else if (uv >= 8 && uv <= 10) {
-    uv.css("background-color", "#E53210").css("color", "white");
-} else {
-    uv.css("background-color", "#B567A4").css("color", "white"); 
-};  
+  var weatherUv = parseFloat(weatherInfo.uvIndex);
 
+  if (weatherUv >= 0 && weatherUv <= 2) {
+    uv.css("background-color", "green").css("color", "white");
+  } else if (weatherUv >= 3 && weatherUv <= 5) {
+      uv.css("background-color", "yellow");
+  } else if (weatherUv >= 6 && weatherUv <= 7) {
+      uv.css("background-color", "orange");
+  } else if (weatherUv >= 8 && weatherUv <= 10) {
+      uv.css("background-color", "red").css("color", "white");
+  } else {
+      uv.css("background-color", "purple").css("color", "white"); 
+  };  
+
+  var tempColor = parseFloat(weatherInfo.temperature);
+
+  if (tempColor >= 0 && tempColor <= 39) {
+    temp.css("color", "blue").css("-webkit-text-stroke", "blue");
+  } else if (tempColor >= 40 && tempColor <= 59) {
+    temp.css("color", "orange").css("-webkit-text-stroke", "orange");
+  } else if (tempColor >= 60 && tempColor <= 79) {
+    temp.css("color", "yellow").css("-webkit-text-stroke", "yellow");
+  } else if (tempColor >= 80 && tempColor <= 100) {
+    temp.css("color", "red").css("-webkit-text-stroke", "red");
+  } else {
+    temp.css("color", "purple").css("-webkit-text-stroke", "purple");
+  }
 
   futureForecast.children("div").each(function(i) {
     $(".date", this).text(moment.unix(weatherInfo.forecast[i].dt).format("MM/DD/YYYY"));
+    $(".date").css("font-weight", "bold").css("border-bottom", "solid", "black", "5px");
     $(".temperature", this).text(weatherInfo.forecast[i].temp.max);
     $(".w-speed", this).text(weatherInfo.forecast[i].wind_speed);
     $(".humidity", this).text(weatherInfo.forecast[i].humidity);
-  })
 
+    var futureTempColor = parseFloat(weatherInfo.forecast[i].temp_max);
+
+    if (futureTempColor >= 0 && futureTempColor <= 39) {
+      $(".temperature").css("color", "blue").css("-webkit-text-stroke", "blue");
+    } else if (futureTempColor >= 40 && futureTempColor <= 59) {
+      $(".temperature").css("color", "orange").css("-webkit-text-stroke", "orange");
+    } else if (futureTempColor >= 60 && futureTempColor <= 79) {
+      $(".temperature").css("color", "yellow").css("-webkit-text-stroke", "yellow");
+    } else if (futureTempColor >= 80 && futureTempColor <= 100) {
+      $(".temperature").css("color", "red").css("-webkit-text-stroke", "red");
+    } else {
+      $(".temperature").css("color", "purple").css("-webkit-text-stroke", "purple");
+    }
+
+  })
 };
 
 
