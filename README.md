@@ -9,7 +9,7 @@
 
 ## What's the weaher going to be like?
 
-I won't sugar code it - this is't perfect, but it is effective. Just type in your cit and state to get the current weather conditions, as well as conditions for the next four days! Simple and convenient. Degrees read in fahreneit. In an effort to make it more readable since I had some dilemmas, I made the temperature (as well as UV Index) color coded based on current conditions. The more extreme the color, the hotter it is! The color ranges is as follows:
+I won't sugar code it - this is't perfect, but it is effective. Just type in your city and state to get the current weather conditions, as well as conditions for the next four days! Simple and convenient. Degrees read in fahreneit. In an effort to make it more readable since I had some dilemmas, I made the temperature (as well as UV Index) color coded based on current conditions. The more extreme the color, the hotter it is! The color ranges is as follows:
 
 0-39 degrees : Blue
 40-59 degrees : Orange
