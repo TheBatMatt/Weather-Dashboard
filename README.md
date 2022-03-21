@@ -1,15 +1,22 @@
-# Ted Jablonowski "The Bat-Coder"
+# The Coding Bat Prsents: The Weather Dashboard
 
-### Portfolio made with:
+### Weather Dashboar made with:
 
 * HTML
+* Bootstrap
 * CSS
+* JQuery
 
-## The Bat-Coder
+## What's the weaher going to be like?
 
-Hello! I am Ted Jablonowski, and this small portfolio website I made will hopefully be the start of something special. I am currently enrolled in MSU and have started my journey! I call myself the "Bat-Coder" because I'm a huge Batman fan (quite obviously) and want any prospective employers and any who may need my services to know that they are hiring an individual with passions and interests! I have finally fully rolled the beginning stages of my portfolio with more to be added over the next several months! 
+I won't sugar code it - this is't perfect, but it is effective. Just type in your cit and state to get the current weather conditions, as well as conditions for the next four days! Simple and convenient. Degrees read in fahreneit. In an effort to make it more readable since I had some dilemmas, I made the temperature (as well as UV Index) color coded based on current conditions. The more extreme the color, the hotter it is! The color ranges is as follows:
 
-As time goes on I will put more of my newly aquired skillsets into this to showcase what I'm capable of. 
+0-39 degrees : Blue
+40-59 degrees : Orange
+60-79 degrees : Yellow
+80-100 degrees : red
+Anything over and under these temperatures in colored purple to indicate potentially dangerous conditions.
+
 
 Feel free to reach out to me at:
 tedmjablonowski@gmail.com
