@@ -1,4 +1,4 @@
-# The Coding Bat Prsents: The Weather Dashboard
+# The Coding Bat Presnts: The Weather Dashboard
 
 ### Weather Dashboar made with:
 
