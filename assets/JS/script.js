@@ -73,15 +73,15 @@ function displayWeatherData(weatherInfo) {
   var tempColor = parseFloat(weatherInfo.temperature);
 
   if (tempColor >= 0 && tempColor <= 39) {
-    temp.css("color", "blue").css("-webkit-text-stroke", "blue");
+    temp.css("color", "blue").css("-webkit-text-stroke", "blue").css("border-bottom", "solid", "black", "5px");
   } else if (tempColor >= 40 && tempColor <= 59) {
-    temp.css("color", "orange").css("-webkit-text-stroke", "orange");
+    temp.css("color", "orange").css("-webkit-text-stroke", "orange").css("border-bottom", "solid", "black", "5px");
   } else if (tempColor >= 60 && tempColor <= 79) {
-    temp.css("color", "yellow").css("-webkit-text-stroke", "yellow");
+    temp.css("color", "yellow").css("-webkit-text-stroke", "yellow").css("border-bottom", "solid", "black", "5px");
   } else if (tempColor >= 80 && tempColor <= 100) {
-    temp.css("color", "red").css("-webkit-text-stroke", "red");
+    temp.css("color", "red").css("-webkit-text-stroke", "red").css("border-bottom", "solid", "black", "5px");
   } else {
-    temp.css("color", "purple").css("-webkit-text-stroke", "purple");
+    temp.css("color", "purple").css("-webkit-text-stroke", "purple").css("border-bottom", "solid", "black", "5px");
   }
 
   futureForecast.children("div").each(function(i) {
@@ -94,32 +94,37 @@ function displayWeatherData(weatherInfo) {
     var futureTempColor = parseFloat(weatherInfo.forecast[i].temp_max);
 
     if (futureTempColor >= 0 && futureTempColor <= 39) {
-      $(".temperature").css("color", "blue").css("-webkit-text-stroke", "blue");
-    } else if (futureTempColor >= 40 && futureTempColor <= 59) {
-      $(".temperature").css("color", "orange").css("-webkit-text-stroke", "orange");
-    } else if (futureTempColor >= 60 && futureTempColor <= 79) {
-      $(".temperature").css("color", "yellow").css("-webkit-text-stroke", "yellow");
-    } else if (futureTempColor >= 80 && futureTempColor <= 100) {
-      $(".temperature").css("color", "red").css("-webkit-text-stroke", "red");
+      $(".temperature").css("color", "blue").css("-webkit-text-stroke", "blue").css("border-bottom", "solid", "black", "5px");
+    } else if (futureTempColor >= 40 && futureTempColor <= 60) {
+      $(".temperature").css("color", "orange").css("-webkit-text-stroke", "orange").css("border-bottom", "solid", "black", "5px");
+    } else if (futureTempColor >= 61 && futureTempColor <= 80) {
+      $(".temperature").css("color", "yellow").css("-webkit-text-stroke", "yellow").css("border-bottom", "solid", "black", "5px");
+    } else if (futureTempColor >= 81 && futureTempColor <= 100) {
+      $(".temperature").css("color", "red").css("-webkit-text-stroke", "red").css("border-bottom", "solid", "black", "5px");
     } else {
-      $(".temperature").css("color", "purple").css("-webkit-text-stroke", "purple");
+      $(".temperature").css("color", "purple").css("-webkit-text-stroke", "purple").css("border-bottom", "solid", "black", "5px");
     }
-
   })
 };
 
-
 //Search Button Functionality
 searchBtn.on("click", function(event) {
-    var citySearch = $("#search-city").val();
-    event.preventDefault();
-    
-    $("span").show();
-    $("span").css("display", "inline")
+  var citySearch = $("#search-city").val();
+  event.preventDefault();
 
-    weatherConditions(citySearch,function(data){
+  $("span").show();
+  $("span").css("display", "inline");
+
+  var cacheData = localStorage.getItem(citySearch);
+
+  if ((cacheData)) {
+    displayWeatherData(JSON.parse(cacheData));
+  } else {
+    weatherConditions(citySearch,function(data) {
+      localStorage.setItem(citySearch, JSON.stringify(data));
       displayWeatherData(data);
     });
+  }
+});
 
-})
 
